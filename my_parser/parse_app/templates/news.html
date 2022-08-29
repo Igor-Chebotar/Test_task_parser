@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+</head>
+<body>
+    <div><a>Новости</a></div>
+<table>
+    <tr>
+        <th>
+            <center>Имя</center>
+        </th>
+        <th>
+            <center>Описание</center>
+        </th>
+        <th>
+            <center>Дата публикации</center>
+        </th>
+        <th>
+            <center>Тег</center>
+        </th>
+
+    </tr>
+    {% for item in news%}
+    <tr>
+        <td><a href="{{item.url}}">{{item.title}}</a></td>
+        <td><a>{{item.text}}</a></td>
+        <td><time>{{item.human_public_date}}</time></td>
+        <td><a>{{item.tag}}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
